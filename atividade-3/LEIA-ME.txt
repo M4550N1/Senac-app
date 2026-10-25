@@ -1,0 +1,46 @@
+ATIVIDADE 3 — PÁGINA DE PAGAMENTO
+
+COMO VISUALIZAR
+1. Extraia o arquivo ZIP inteiro (não abra o HTML de dentro do ZIP).
+2. Abra a pasta atividade-3.
+3. Dê dois cliques em index.html.
+Mantenha index.html, style.css e script.js na mesma pasta.
+O projeto funciona offline, sem instalação e sem dependências externas.
+
+ARQUIVOS
+index.html — estrutura e campos dos dois wireframes fornecidos.
+style.css — apresentação e adaptação para diferentes tamanhos de tela.
+script.js — validação do valor, painéis, bandeiras e cálculos.
+
+COMPORTAMENTOS
+- Valor em branco: mostra mensagem de preenchimento obrigatório.
+- Pix: exibe apenas seu painel com CPF e aplica 10% de desconto.
+- Cartão: exibe apenas seu painel, com número, titular, código de segurança,
+  vencimento, parcelas, cinco opções de parcelamento e bandeira ao lado do número.
+- Prefixo 1234: bandeira Azul. Prefixo 4321: bandeira Coral.
+  Ambos são ícones fictícios criados em SVG, incluídos no próprio JavaScript.
+- Outro início: mensagem exata "Número de cartão inválido".
+- 1, 2 e 3 parcelas sem juros; 4 parcelas com 5%; 5 parcelas com 10%.
+  Juros calculados sobre o valor inicial, aplicados uma única vez.
+- Selecionar parcelas atualiza o total imediatamente.
+- Alterar valor ou método fecha os painéis e exige clicar em Informar dados
+  novamente para impedir o uso de um cálculo antigo.
+- Pagar exibe apenas o resultado de sucesso no lugar dos controles da compra.
+  Não há validação bancária nem processamento ou envio de dados.
+- Os painéis nunca aparecem simultaneamente.
+
+EXEMPLO PARA CONFERÊNCIA
+Valor: 1000
+Pix: desconto de R$ 100,00; total de R$ 900,00.
+Cartão: 1x R$ 1.000,00; 2x R$ 500,00; 3x aproximadamente R$ 333,33;
+4x R$ 262,50 (total R$ 1.050,00); 5x R$ 220,00 (total R$ 1.100,00).
+Valores são calculados em centavos e arredondados para duas casas decimais.
+Quando a divisão não é exata, o resumo informa o ajuste de centavos.
+
+TESTES REALIZADOS
+Chromium: valor vazio e valores inválidos, formatos monetários, desconto Pix,
+cinco parcelamentos, troca do total, dois ícones de bandeira e número inválido,
+alternância exclusiva dos painéis, mudança de valor e mensagem de sucesso.
+Layout sem rolagem horizontal nas larguras de 375, 768 e 1440 pixels.
+
+Use somente dados fictícios durante os testes.

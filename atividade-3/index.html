@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de pagamento demonstrativa com Pix e cartão de crédito — Atividade 3.">
+  <title>Pagamento | Atividade 3</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="payment-page">
+    <header><p class="eyebrow">ATIVIDADE 3 · JAVASCRIPT</p><h1>Pagamento</h1><p>Escolha a melhor forma de pagar.</p></header>
+    <div id="checkout">
+      <form id="options-form" novalidate>
+        <div class="value-row"><label for="value">Valor</label><div class="money-input"><span aria-hidden="true">R$</span><input id="value" type="text" inputmode="decimal" placeholder="0,00" autocomplete="off" aria-describedby="value-help value-error"></div></div>
+        <small id="value-help">Informe o valor da compra. Exemplo: 1.000,00.</small>
+        <p class="error" id="value-error" role="alert" hidden></p>
+        <fieldset class="methods"><legend class="sr-only">Forma de pagamento</legend><label><input type="radio" name="method" value="pix" checked> Pix <span class="discount">−10%</span></label><label><input type="radio" name="method" value="card"> Cartão de crédito</label></fieldset>
+        <button class="button secondary" type="submit">Informar dados</button>
+      </form>
+      <section class="payment-panel" id="pix-panel" aria-labelledby="pix-title" hidden>
+        <h2 id="pix-title">Pix</h2>
+        <div class="field-row"><label for="pix-cpf">CPF</label><input id="pix-cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" autocomplete="off"></div>
+        <p class="pix-note">10% de desconto: você economiza <strong id="pix-saving">R$ 0,00</strong>.</p>
+      </section>
+      <section class="payment-panel" id="card-panel" aria-labelledby="card-title" hidden>
+        <h2 id="card-title">Cartão de crédito</h2>
+        <div class="field-row"><label for="card-number">Número</label><div class="number-row"><input id="card-number" type="text" inputmode="numeric" maxlength="23" placeholder="0000 0000 0000 0000" autocomplete="off" aria-describedby="number-help number-error"><span id="card-brand" class="card-brand" role="status" aria-live="polite" hidden></span></div></div>
+        <p class="error number-error" id="number-error" role="alert" hidden>Número de cartão inválido</p>
+        <small id="number-help">Use dados fictícios: prefixos 1234 ou 4321.</small>
+        <div class="field-row"><label for="holder">Titular</label><input id="holder" type="text" placeholder="Nome no cartão" autocomplete="off"></div>
+        <div class="field-row"><label for="cvv">Cód. Segurança</label><input id="cvv" type="password" inputmode="numeric" maxlength="4" placeholder="CVV" autocomplete="off"></div>
+        <div class="field-row"><label for="expiration">Vencimento</label><input id="expiration" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" autocomplete="off"></div>
+        <div class="field-row"><label for="installments">Parcelas</label><select id="installments" aria-describedby="interest-note installment-preview"></select></div>
+        <ul id="installment-preview" class="installment-preview" aria-label="Valores de parcelamento"></ul>
+        <p class="interest-note" id="interest-note">1 a 3x sem juros · 4x com 5% de juros · 5x com 10% de juros.</p>
+      </section>
+      <div id="summary-placeholder" hidden></div>
+      <div id="summary-values" class="summary">
+        <dl class="breakdown" id="breakdown" hidden><div><dt>Valor inicial</dt><dd id="base-total"></dd></div><div><dt id="adjustment-label"></dt><dd id="adjustment-value"></dd></div></dl>
+        <div class="total" aria-live="polite" aria-atomic="true"><p><strong>Total:</strong> <span id="total-value">R$ 0,00</span></p><small id="total-detail"></small></div>
+        <button class="button" id="pay" type="button" disabled>Pagar</button>
+      </div>
+      <p class="demo-note">Demonstração acadêmica. Use apenas dados fictícios. Nenhum dado é enviado ou armazenado e não há cobrança real.</p>
+    </div>
+    <section class="success" id="success" role="status" tabindex="-1" hidden><span aria-hidden="true">✓</span><h2>Pagamento realizado com sucesso!</h2><p>Simulação concluída. Nenhuma cobrança foi efetuada.</p></section>
+    <noscript><p class="error">Ative o JavaScript para usar as opções de pagamento.</p></noscript>
+  </main>
+</body>
+</html>
