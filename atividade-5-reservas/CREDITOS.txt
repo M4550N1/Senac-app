@@ -1,0 +1,23 @@
+Página Hotel Brisa do Mar, adaptada da Atividade 4 para a Atividade 5.
+Hotel, marca e oferta fictícios; HTML, CSS complementar, JavaScript e ícones
+criados para os wireframes e atividades fornecidos.
+
+Bootstrap 5.3.3 — The Bootstrap Authors — MIT.
+Licença incluída em public/assets/vendor/bootstrap-LICENSE.txt.
+https://getbootstrap.com/
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+
+JSON Server 0.17.4 — typicode — MIT.
+Instalado via npm; licença distribuída com a dependência.
+https://github.com/typicode/json-server/tree/v0.17.4
+https://www.npmjs.com/package/json-server/v/0.17.4
+
+Fotos do modelo Royal, Colorlib — CC BY 3.0.
+Atribuição preservada no rodapé da página do hotel; recorte visual via CSS.
+https://colorlib.com/
+https://creativecommons.org/licenses/by/3.0/
+https://github.com/technext/royal
+https://raw.githubusercontent.com/technext/royal/master/image/banner_bg.jpg
+https://raw.githubusercontent.com/technext/royal/master/image/room1.jpg
+https://raw.githubusercontent.com/technext/royal/master/image/room2.jpg
+https://raw.githubusercontent.com/technext/royal/master/image/room4.jpg

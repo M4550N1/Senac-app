@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hotel Brisa do Mar: conforto, café da manhã e suítes acolhedoras. Projeto acadêmico de página responsiva com Bootstrap.">
+  <title>Reservas | Hotel Brisa do Mar</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/api.js" defer></script>
+  <script src="assets/js/reserva.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+      <a class="brand d-flex align-items-center gap-2" href="index.html" aria-label="Hotel Brisa do Mar — início">
+        <svg width="43" height="43" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 26a15 15 0 0 1 30 0M24 3v5M6 10l4 4M42 10l-4 4M2 26h5M41 26h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 33c6-5 12 5 19 0s13 5 19 0M5 41c6-5 12 5 19 0s13 5 19 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Brisa do Mar<small>HOTEL &amp; DESCANSO</small></span>
+      </a>
+      <a class="reservations-link" href="reservas.html">Solicitações de reservas <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-12 col-md-5">
+          <div class="hero-copy">
+            <p class="eyebrow">SEU PRÓXIMO REFÚGIO</p>
+            <h1 id="hero-title">Sinta o conforto acolhedor de nossas hospedagens<span>.</span></h1>
+            <p class="hero-description">Hospede-se nos nossos hotéis com quartos a partir de <strong>R$ 100,00.</strong></p>
+            <a class="btn btn-brand rounded-pill" href="#quartos">Saiba mais <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-7">
+          <figure class="hero-figure mb-0"><img class="img-fluid w-100 hero-image" src="assets/img/hotel.jpg" width="1920" height="1210" alt="Área de descanso com espreguiçadeiras, piscina e coqueiros à beira-mar"><figcaption>Uma pausa na rotina. Um encontro com o bem-estar.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <section class="benefits container" aria-labelledby="benefits-title">
+      <p class="eyebrow text-center">PEQUENOS DETALHES, GRANDES MOMENTOS</p>
+      <h2 class="section-title text-center" id="benefits-title">Por que se hospedar em nossos hotéis?</h2>
+      <div class="row g-4 g-md-5 mt-1">
+        <div class="col-12 col-md-6 d-flex align-items-center gap-3 gap-lg-4 benefit">
+          <div class="benefit-icon flex-shrink-0"><svg width="39" height="39" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M10 17h25v14a9 9 0 0 1-9 9h-7a9 9 0 0 1-9-9V17Z" stroke="currentColor" stroke-width="2"/><path d="M35 19h4a5 5 0 0 1 0 10h-4M7 44h32M17 5v6M25 3v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div><h3>Delicioso café da manhã</h3><p>Incluso em todas as diárias.</p></div>
+        </div>
+        <div class="col-12 col-md-6 d-flex align-items-center gap-3 gap-lg-4 benefit">
+          <div class="benefit-icon flex-shrink-0"><svg width="39" height="39" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M38 20c0 11-14 24-14 24S10 31 10 20a14 14 0 1 1 28 0Z" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="20" r="5" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div><h3>Fácil acesso</h3><p>Perto dos principais pontos turísticos.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="container rooms-section" id="quartos" aria-labelledby="rooms-title">
+      <div class="rooms-inner">
+        <p class="eyebrow text-center">ESCOLHA O SEU ACONCHEGO</p>
+        <h2 class="section-title text-center" id="rooms-title">Nossos quartos</h2>
+        <div class="row g-4 g-lg-5 mt-1">
+          <div class="col-12 col-sm-4"><article class="room-card"><img class="img-fluid w-100" src="assets/img/solteiro.jpg" width="263" height="270" loading="lazy" alt="Suíte com cama, detalhes em madeira e luz natural"><div class="room-caption"><span aria-hidden="true">01</span><h3>Suíte Solteiro</h3></div></article></div>
+          <div class="col-12 col-sm-4"><article class="room-card"><img class="img-fluid w-100" src="assets/img/casal.jpg" width="263" height="270" loading="lazy" alt="Suíte com cama de casal, iluminação acolhedora e mesa de apoio"><div class="room-caption"><span aria-hidden="true">02</span><h3>Suíte Casal</h3></div></article></div>
+          <div class="col-12 col-sm-4"><article class="room-card"><img class="img-fluid w-100" src="assets/img/master.jpg" width="263" height="270" loading="lazy" alt="Ambiente da suíte master com cama e decoração aconchegante"><div class="room-caption"><span aria-hidden="true">03</span><h3>Suíte Master</h3></div></article></div>
+        </div>
+      </div>
+    </section>
+    <section class="reservation" id="reserva" aria-labelledby="reservation-title">
+      <div class="container"><div class="row g-4 g-lg-5">
+        <div class="col-12 col-lg-4 reservation-intro"><p class="eyebrow">SUA PRÓXIMA BOA LEMBRANÇA</p><h2 id="reservation-title">Faça sua reserva</h2><p>Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p><span class="reservation-line" aria-hidden="true"></span></div>
+        <div class="col-12 col-lg-8">
+          <form id="reservation-form" class="row g-3" action="#" novalidate>
+            <div class="col-12 col-sm-6"><label class="form-label" for="name">Nome <span aria-hidden="true">*</span></label><input class="form-control" id="name" type="text" placeholder="Como podemos chamar você?" autocomplete="name" required><div class="invalid-feedback">Informe seu nome.</div></div>
+            <div class="col-12 col-sm-6"><label class="form-label" for="email">E-mail <span aria-hidden="true">*</span></label><input class="form-control" id="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required><div class="invalid-feedback">Informe um e-mail válido.</div></div>
+            <div class="col-12 col-sm-6"><label class="form-label" for="checkin">Data de entrada <span aria-hidden="true">*</span></label><input class="form-control" id="checkin" type="date" required><div class="invalid-feedback">Informe a data de entrada.</div></div>
+            <div class="col-12 col-sm-6"><label class="form-label" for="checkout">Data de saída <span aria-hidden="true">*</span></label><input class="form-control" id="checkout" type="date" required aria-describedby="checkout-error"><div class="invalid-feedback" id="checkout-error">A saída deve ser posterior à entrada.</div></div>
+            <div class="col-12 col-sm-6"><label class="form-label" for="notes">Observações</label><textarea class="form-control" id="notes" rows="4" placeholder="Conte se há algo que torne sua estadia ainda melhor."></textarea></div>
+            <div class="col-12 col-sm-6"><div class="row g-3"><div class="col-6"><label class="form-label" for="adults">Adultos <span aria-hidden="true">*</span></label><input class="form-control" id="adults" type="number" min="1" max="10" value="1" required><div class="invalid-feedback">De 1 a 10 adultos.</div></div><div class="col-6"><label class="form-label" for="children">Crianças</label><input class="form-control" id="children" type="number" min="0" max="10" value="0"><div class="invalid-feedback">De 0 a 10 crianças.</div></div><div class="col-12"><button class="btn btn-brand rounded-pill w-100" type="submit">Enviar <span aria-hidden="true">→</span></button></div></div></div>
+            <div class="col-12"><small class="form-note">* Campos obrigatórios. As solicitações são salvas localmente pelo JSON Server. Este é um projeto acadêmico.</small></div>
+            <div class="col-12" id="form-result" role="status" tabindex="-1" hidden><p class="alert mb-0" id="form-message"></p></div>
+          </form>
+        </div>
+      </div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><small>Brisa do Mar · Hotel fictício · Atividade 5 · JSON Server</small><small>Fotos: modelo Royal, <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></small></div></footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+ATIVIDADE 5 — HOTEL COM JSON SERVER
+
+ESTA VERSÃO PRECISA DO SERVIDOR
+Não abra public/index.html com dois cliques. Agora o formulário envia dados
+para uma API local, que precisa estar em execução.
+As atividades anteriores continuam em suas próprias pastas, sem alterações.
+
+COMO USAR NO WINDOWS (PC)
+1. Instale o Node.js LTS a partir de https://nodejs.org/ (inclui o npm).
+   Se já estiver instalado, pule este passo.
+2. Extraia o ZIP inteiro e abra a pasta atividade-5-reservas.
+3. Dê dois cliques em INICIAR.bat. Na primeira vez, aguarde a instalação
+   das dependências. É necessária conexão com a Internet nessa instalação.
+4. Mantenha a janela do terminal aberta enquanto estiver usando o site.
+5. Digite no navegador: http://localhost:3000
+6. Preencha o formulário no rodapé e clique em Enviar.
+7. Clique em Solicitações de reservas no cabeçalho, ou no link de sucesso.
+   A tabela também pode ser aberta em http://localhost:3000/reservas.html
+8. Para parar o serviço, pressione Ctrl+C no terminal.
+
+ALTERNATIVA PELO TERMINAL (WINDOWS, LINUX OU MAC)
+Abra o terminal dentro da pasta atividade-5-reservas e execute:
+
+npm ci
+npm start
+
+A instalação usa package-lock.json para reproduzir as versões das dependências.
+Node.js 18 ou superior; recomendado Node.js LTS atual.
+O JSON Server está fixado na versão 0.17.4 e não precisa de instalação global.
+Após a instalação, não há dependência externa durante o uso local.
+Se a porta 3000 estiver ocupada, encerre o outro serviço antes de iniciar.
+
+PÁGINAS E ENDPOINTS
+http://localhost:3000                  Hotel e formulário
+http://localhost:3000/reservas.html     Tabela de solicitações
+GET  /reservas                         Consulta os registros
+POST /reservas                         Registra uma solicitação (JSON)
+GET  /reservas?_sort=criadaEm&_order=desc Lista da mais recente para a mais antiga
+
+ARQUIVOS
+package.json / package-lock.json — dependência e comando de inicialização
+INICIAR.bat — inicializador para Windows
+ db.json — banco local, inicialmente com "reservas": []
+public/index.html — página do hotel com formulário integrado
+public/reservas.html — nova página com tabela responsiva
+public/assets/js/api.js — chamadas GET e POST via Fetch API
+public/assets/js/reserva.js — validação, envio e retorno do formulário
+public/assets/js/listagem.js — consulta automática e montagem da tabela
+public/assets/css/style.css — estilos do hotel e da tabela
+public/assets/vendor — Bootstrap local e licença
+public/assets/img — fotos e identidade visual
+
+DADOS REGISTRADOS
+id: gerado pelo JSON Server
+nome, email: dados de contato
+entrada, saida: datas ISO (AAAA-MM-DD)
+observacoes: texto opcional
+adultos, criancas: valores numéricos
+criadaEm: data/hora ISO da solicitação
+
+FUNCIONAMENTO
+- O formulário valida campos, e-mail, quantidade de hóspedes e ordem das datas.
+- Enviar faz POST com Content-Type application/json e aguarda a resposta.
+- Sucesso só aparece após confirmação da API; depois os campos são limpos.
+- Durante o envio, o botão fica desativado para evitar cliques repetidos.
+- Se o serviço falhar, os dados preenchidos são mantidos e há mensagem de erro.
+- Ao abrir reservas.html, o JavaScript faz GET e preenche todas as colunas.
+- Há estados de carregamento, lista vazia, falha e botão Atualizar lista.
+- O texto retornado pela API é exibido com textContent, sem executar HTML.
+- Os registros persistem no arquivo db.json entre execuções do serviço.
+- O banco da entrega está vazio: os registros de teste foram removidos.
+- JSON Server e páginas são servidos juntos, na porta 3000 e somente neste PC.
+- São solicitações fictícias de disponibilidade, não confirmações de reserva.
+
+VERIFICAÇÕES EXECUTADAS
+Node.js 24 e Chromium: npm ci, npm start, POST de todos os campos,
+consulta GET, gravação real em db.json, tabela após recarregar,
+validação de formulário e datas, estado vazio, ordenação, falhas de GET/POST,
+nova tentativa de consulta e exibição segura de texto na tabela.
+Tabela sem overflow da página em 320, 375, 768 e 1366 pixels; as colunas
+continuam acessíveis pela rolagem horizontal dentro da tabela.
+O inicializador .bat é fornecido para conveniência; o ambiente de verificação
+é Linux, e os comandos npm foram executados diretamente nele.
+
+Projeto acadêmico. Utilize somente informações fictícias nos testes.
+Créditos e fontes das fotos/framework em CREDITOS.txt.

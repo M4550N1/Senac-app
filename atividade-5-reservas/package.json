@@ -1,0 +1,15 @@
+{
+  "name": "brisa-do-mar-reservas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atividade 5: reservas de hotel com JSON Server",
+  "scripts": {
+    "start": "json-server --watch db.json --static public --host 127.0.0.1 --port 3000"
+  },
+  "dependencies": {
+    "json-server": "0.17.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
