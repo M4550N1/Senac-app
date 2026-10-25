@@ -1,0 +1,46 @@
+ATIVIDADE 2 — FINANÇA FÁCIL
+
+COMO ABRIR
+Extraia todo o ZIP e abra index.html no navegador. Mantenha a pasta assets
+junto aos arquivos HTML. O site funciona sem instalação e sem Internet.
+
+PÁGINAS
+index.html       Página inicial
+emprestimos.html Modalidades, representação de simulação e perguntas frequentes
+cliente.html     Cadastro/contato demonstrativo
+assets/style.css Estilos compartilhados e adaptações para celular e tablet
+wireframes/      Wireframes originais enviados na Atividade 1 (PNG e SVG)
+
+CONFORMIDADE COM A PROPOSTA
+Mantidos o menu lateral, os blocos de conteúdo, os serviços e os formulários
+dos wireframes. Paleta verde, azul-escuro e tons claros, com fotografias
+relacionadas ao ambiente profissional e ao planejamento financeiro.
+As três páginas criadas têm links entre si. Financiamentos, antecipação e
+redes sociais usam href="#", pois apenas compõem o layout solicitado.
+Os controles da simulação são ilustrativos: não calculam parcelas.
+O cadastro valida os campos no navegador e exibe uma mensagem demonstrativa;
+não envia dados, não armazena informações e não possui integração com servidor.
+A confirmação demonstrativa usa apenas um pequeno evento JavaScript embutido.
+As perguntas frequentes utilizam os elementos HTML nativos details e summary.
+A instituição, os contatos e as ofertas são fictícios, para fins acadêmicos.
+
+IMAGENS E FONTES
+Fotografias do modelo gratuito Finance Business, de TemplateMo, disponíveis
+no repositório público technext/finance-business:
+https://templatemo.com/tm-545-finance-business
+https://github.com/technext/finance-business
+Arquivos de origem:
+assets/images/slide_01.jpg -> assets/financeira.jpg
+assets/images/service_01.jpg -> assets/negocios-nova.jpg
+assets/images/more-info.jpg -> assets/equipe.jpg
+Originais baixados de:
+https://raw.githubusercontent.com/technext/finance-business/master/assets/images/
+Informações e condições do fornecedor: https://templatemo.com/about
+O HTML e o CSS desta entrega foram desenvolvidos para os wireframes fornecidos;
+não foi utilizado o código de layout desse modelo. Não há dependência de
+fontes, bibliotecas, CDN ou imagens externas durante a abertura do site.
+
+VALIDAÇÃO
+Navegação, carregamento de imagens, campos obrigatórios, confirmação de
+cadastro demonstrativo e perguntas frequentes verificados em Chromium.
+Layout verificado nas larguras de 1440, 768 e 375 pixels.
